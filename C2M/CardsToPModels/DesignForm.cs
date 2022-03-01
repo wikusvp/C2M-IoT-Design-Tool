@@ -589,7 +589,7 @@ namespace CardsToPModels
             bool cardSelected = false;              //Saves whether a card or an empty space was clicked 
             if (insertArrow)
             {
-                foreach (Card card in design.Cards)
+                foreach (Card card in design.Cards) if (card.CardType != "Other")
                 {
                     if (card.IsMouseOn(e.X, e.Y))
                     {
@@ -913,7 +913,7 @@ namespace CardsToPModels
         {
             if (!insertArrow)
             {
-                foreach (Card card in design.Cards)
+                foreach (Card card in design.Cards) if (card.CardType != "Other")
                 {
                     if (card.IsMouseOn(e.X, e.Y))
                     {
