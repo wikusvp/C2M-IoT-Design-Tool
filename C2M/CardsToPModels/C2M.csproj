@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8FF129C-6927-4860-9585-68BF8C77B38D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CardsToPModels</RootNamespace>
+    <AssemblyName>CardsToPModels</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\CardsToPModels.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arrow.cs" />
+    <Compile Include="CardCount.cs" />
+    <Compile Include="NameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NameForm.Designer.cs">
+      <DependentUpon>NameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rules\ConceptualRules.cs" />
+    <Compile Include="HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Card.cs" />
+    <Compile Include="CardName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardName.Designer.cs">
+      <DependentUpon>CardName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deck.cs" />
+    <Compile Include="Design.cs" />
+    <Compile Include="DesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignForm.Designer.cs">
+      <DependentUpon>DesignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewDesign.Designer.cs">
+      <DependentUpon>NewDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rules\IoTRules.cs" />
+    <Compile Include="PresentationModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules.cs" />
+    <Compile Include="Rules\MobileRules.cs" />
+    <Compile Include="SaveConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveConfirmation.Designer.cs">
+      <DependentUpon>SaveConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UndoRedo.cs" />
+    <Compile Include="Widget.cs" />
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardSelector.resx">
+      <DependentUpon>CardSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardName.resx">
+      <DependentUpon>CardName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignForm.resx">
+      <DependentUpon>DesignForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameForm.resx">
+      <DependentUpon>NameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewDesign.resx">
+      <DependentUpon>NewDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="CardSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardSelector.Designer.cs">
+      <DependentUpon>CardSelector.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SaveConfirmation.resx">
+      <DependentUpon>SaveConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\example 1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\example 2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\example 3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\card.png" />
+    <None Include="Resources\Export Image.png" />
+    <None Include="Resources\bin.png" />
+    <None Include="Resources\bin01.png" />
+    <None Include="Resources\bin1.png" />
+    <None Include="Resources\bin02.png" />
+    <None Include="Resources\bin011.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\copy %281%29.png" />
+    <None Include="Resources\C1.png" />
+    <None Include="Resources\C2.png" />
+    <None Include="Resources\C3.png" />
+    <None Include="Resources\C4.png" />
+    <None Include="Resources\C5.png" />
+    <None Include="Resources\C6.png" />
+    <None Include="Resources\C7.png" />
+    <None Include="Resources\C8.png" />
+    <None Include="Resources\C9.png" />
+    <None Include="Resources\C10.png" />
+    <Content Include="Resources\F1.png" />
+    <Content Include="Resources\F10.png" />
+    <Content Include="Resources\F2.png" />
+    <Content Include="Resources\F3.png" />
+    <Content Include="Resources\F4.png" />
+    <Content Include="Resources\F5.png" />
+    <Content Include="Resources\F6.png" />
+    <Content Include="Resources\F7.png" />
+    <Content Include="Resources\F8.png" />
+    <Content Include="Resources\F9.png" />
+    <None Include="Resources\icons8-save-60.png" />
+    <None Include="Resources\icons8-curly-arrow-24.png" />
+    <None Include="Resources\icons8-save-all-60.png" />
+    <None Include="Resources\garbage.png" />
+    <None Include="Resources\M1.png" />
+    <None Include="Resources\M2.png" />
+    <None Include="Resources\M3.png" />
+    <None Include="Resources\M4.png" />
+    <None Include="Resources\M5.png" />
+    <None Include="Resources\M6.png" />
+    <None Include="Resources\M7.png" />
+    <None Include="Resources\M8.png" />
+    <None Include="Resources\M9.png" />
+    <None Include="Resources\M10.png" />
+    <None Include="Resources\M11.png" />
+    <None Include="Resources\M12.png" />
+    <None Include="Resources\M13.png" />
+    <None Include="Resources\M14.png" />
+    <None Include="Resources\P1.png" />
+    <None Include="Resources\P2.png" />
+    <None Include="Resources\P3.png" />
+    <None Include="Resources\P4.png" />
+    <None Include="Resources\P5.png" />
+    <None Include="Resources\P6.png" />
+    <None Include="Resources\P7.png" />
+    <None Include="Resources\P8.png" />
+    <None Include="Resources\P9.png" />
+    <Content Include="Resources\S1.png" />
+    <Content Include="Resources\S10.png" />
+    <Content Include="Resources\S11.png" />
+    <Content Include="Resources\S12.png" />
+    <Content Include="Resources\S13.png" />
+    <Content Include="Resources\S14.png" />
+    <Content Include="Resources\S15.png" />
+    <Content Include="Resources\S2.png" />
+    <Content Include="Resources\S3.png" />
+    <Content Include="Resources\S4.png" />
+    <Content Include="Resources\S5.png" />
+    <Content Include="Resources\S6.png" />
+    <Content Include="Resources\S7.png" />
+    <Content Include="Resources\S8.png" />
+    <Content Include="Resources\S9.png" />
+    <None Include="Resources\share.png" />
+    <None Include="Resources\SC1.png" />
+    <None Include="Resources\SC2.png" />
+    <None Include="Resources\SC3.png" />
+    <None Include="Resources\SC4.png" />
+    <None Include="Resources\SC5.png" />
+    <None Include="Resources\SC6.png" />
+    <None Include="Resources\SC7.png" />
+    <None Include="Resources\SC8.png" />
+    <None Include="Resources\SC9.png" />
+    <None Include="Resources\SC10.png" />
+    <None Include="Resources\SC11.png" />
+    <None Include="Resources\SC12.png" />
+    <None Include="Resources\SC13.png" />
+    <None Include="Resources\SC14.png" />
+    <None Include="Resources\SC15.png" />
+    <None Include="Resources\SC16.png" />
+    <None Include="Resources\SC17.png" />
+    <None Include="Resources\SC18.png" />
+    <Content Include="Resources\SS1.png" />
+    <Content Include="Resources\SS10.png" />
+    <Content Include="Resources\SS11.png" />
+    <Content Include="Resources\SS12.png" />
+    <Content Include="Resources\SS2.png" />
+    <Content Include="Resources\SS3.png" />
+    <Content Include="Resources\SS4.png" />
+    <Content Include="Resources\SS5.png" />
+    <Content Include="Resources\SS6.png" />
+    <Content Include="Resources\SS7.png" />
+    <Content Include="Resources\SS8.png" />
+    <Content Include="Resources\SS9.png" />
+    <Content Include="Resources\T1.png" />
+    <Content Include="Resources\T10.png" />
+    <Content Include="Resources\T11.png" />
+    <Content Include="Resources\T12.png" />
+    <Content Include="Resources\T13.png" />
+    <Content Include="Resources\T14.png" />
+    <Content Include="Resources\T15.png" />
+    <Content Include="Resources\T16.png" />
+    <Content Include="Resources\T17.png" />
+    <Content Include="Resources\T18.png" />
+    <Content Include="Resources\T19.png" />
+    <Content Include="Resources\T2.png" />
+    <Content Include="Resources\T20.png" />
+    <Content Include="Resources\T21.png" />
+    <Content Include="Resources\T22.png" />
+    <Content Include="Resources\T23.png" />
+    <Content Include="Resources\T24.png" />
+    <Content Include="Resources\T25.png" />
+    <Content Include="Resources\T26.png" />
+    <Content Include="Resources\T27.png" />
+    <Content Include="Resources\T28.png" />
+    <Content Include="Resources\T29.png" />
+    <Content Include="Resources\T3.png" />
+    <Content Include="Resources\T4.png" />
+    <Content Include="Resources\T5.png" />
+    <Content Include="Resources\T6.png" />
+    <Content Include="Resources\T7.png" />
+    <Content Include="Resources\T8.png" />
+    <Content Include="Resources\T9.png" />
+    <None Include="Resources\ConceptualExample_1.jpg" />
+    <None Include="Resources\ConceptualExample_2.jpg" />
+    <Content Include="Resources\A1.png" />
+    <Content Include="Resources\A3.png" />
+    <Content Include="Resources\A4.png" />
+    <Content Include="Resources\A5.png" />
+    <Content Include="Resources\A6.png" />
+    <Content Include="Resources\A7.png" />
+    <Content Include="Resources\A8.png" />
+    <Content Include="Resources\A9.png" />
+    <Content Include="Resources\example 4.PNG" />
+    <Content Include="Resources\example 5.PNG" />
+    <None Include="Resources\MobileExample_3.jpg" />
+    <None Include="Resources\MobileExample_2.jpg" />
+    <None Include="Resources\MobileExample_1.jpg" />
+    <None Include="Resources\IoTExample_5.PNG" />
+    <None Include="Resources\IoTExample_4.PNG" />
+    <None Include="Resources\IoTExample_3.PNG" />
+    <None Include="Resources\IoTExample_2.PNG" />
+    <None Include="Resources\IoTExample_1.PNG" />
+    <None Include="Resources\ST2.jpg" />
+    <None Include="Resources\ST1.jpg" />
+    <None Include="Resources\SE4.jpg" />
+    <None Include="Resources\SE3.jpg" />
+    <None Include="Resources\SE2.jpg" />
+    <None Include="Resources\SE1.jpg" />
+    <None Include="Resources\O7.jpg" />
+    <None Include="Resources\O6.jpg" />
+    <None Include="Resources\O5.jpg" />
+    <None Include="Resources\O4.jpg" />
+    <None Include="Resources\O3.jpg" />
+    <None Include="Resources\O2.jpg" />
+    <None Include="Resources\O1.jpg" />
+    <None Include="Resources\I7.jpg" />
+    <None Include="Resources\I6.jpg" />
+    <None Include="Resources\I5.jpg" />
+    <None Include="Resources\I4.jpg" />
+    <None Include="Resources\I3.jpg" />
+    <None Include="Resources\I2.jpg" />
+    <None Include="Resources\I1.jpg" />
+    <None Include="Resources\ST3.jpg" />
+    <None Include="Resources\ST3.PNG" />
+    <None Include="Resources\ST2.PNG" />
+    <None Include="Resources\ST1.PNG" />
+    <None Include="Resources\SE4.PNG" />
+    <None Include="Resources\SE3.PNG" />
+    <None Include="Resources\SE2.PNG" />
+    <None Include="Resources\SE1.PNG" />
+    <None Include="Resources\O7.PNG" />
+    <None Include="Resources\O6.PNG" />
+    <None Include="Resources\O5.PNG" />
+    <None Include="Resources\O4.PNG" />
+    <None Include="Resources\O3.PNG" />
+    <None Include="Resources\O2.PNG" />
+    <None Include="Resources\O1.PNG" />
+    <None Include="Resources\I7.PNG" />
+    <None Include="Resources\I6.PNG" />
+    <None Include="Resources\I5.PNG" />
+    <None Include="Resources\I4.PNG" />
+    <None Include="Resources\I3.PNG" />
+    <None Include="Resources\I2.PNG" />
+    <None Include="Resources\I1.PNG" />
+    <None Include="Resources\V4.jpg" />
+    <None Include="Resources\V5.jpg" />
+    <None Include="Resources\W3.jpg" />
+    <None Include="Resources\R6.jpg" />
+    <None Include="Resources\W8.jpg" />
+    <None Include="Resources\W7.jpg" />
+    <None Include="Resources\W6.jpg" />
+    <None Include="Resources\W5.jpg" />
+    <None Include="Resources\W4.jpg" />
+    <None Include="Resources\W2.jpg" />
+    <None Include="Resources\W1.jpg" />
+    <None Include="Resources\V13.jpg" />
+    <None Include="Resources\V12.jpg" />
+    <None Include="Resources\V11.jpg" />
+    <None Include="Resources\V10.jpg" />
+    <None Include="Resources\V9.jpg" />
+    <None Include="Resources\V8.jpg" />
+    <None Include="Resources\V7.jpg" />
+    <None Include="Resources\V6.jpg" />
+    <None Include="Resources\V3.jpg" />
+    <None Include="Resources\V2.jpg" />
+    <None Include="Resources\V1.jpg" />
+    <None Include="Resources\R5.jpg" />
+    <None Include="Resources\R4.jpg" />
+    <None Include="Resources\R3.jpg" />
+    <None Include="Resources\R2.jpg" />
+    <None Include="Resources\R1.jpg" />
+    <None Include="Resources\G10.jpg" />
+    <None Include="Resources\G9.jpg" />
+    <None Include="Resources\G8.jpg" />
+    <None Include="Resources\G7.jpg" />
+    <None Include="Resources\G6.jpg" />
+    <None Include="Resources\G5.jpg" />
+    <None Include="Resources\G4.jpg" />
+    <None Include="Resources\G3.jpg" />
+    <None Include="Resources\G2.jpg" />
+    <None Include="Resources\G1.jpg" />
+    <None Include="Resources\W9.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
