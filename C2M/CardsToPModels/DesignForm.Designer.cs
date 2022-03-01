@@ -312,19 +312,19 @@ namespace CardsToPModels
             // pModelToolStripMenuItem1
             // 
             this.pModelToolStripMenuItem1.Name = "pModelToolStripMenuItem1";
-            this.pModelToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.pModelToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
             this.pModelToolStripMenuItem1.Text = "PModel";
             // 
             // pIMToolStripMenuItem1
             // 
             this.pIMToolStripMenuItem1.Name = "pIMToolStripMenuItem1";
-            this.pIMToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.pIMToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
             this.pIMToolStripMenuItem1.Text = "PIM";
             // 
             // pMRToolStripMenuItem1
             // 
             this.pMRToolStripMenuItem1.Name = "pMRToolStripMenuItem1";
-            this.pMRToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.pMRToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
             this.pMRToolStripMenuItem1.Text = "PMR";
             // 
             // contextMenuNormal
@@ -500,14 +500,14 @@ namespace CardsToPModels
             this.maximizetoolStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.maximizetoolStripDropDownButton.Name = "maximizetoolStripDropDownButton";
             this.maximizetoolStripDropDownButton.Size = new System.Drawing.Size(32, 24);
-            this.maximizetoolStripDropDownButton.Text = "toolStripDropDownButton1";
+            this.maximizetoolStripDropDownButton.Text = "Add model views to the window";
             this.maximizetoolStripDropDownButton.Visible = false;
             this.maximizetoolStripDropDownButton.VisibleChanged += new System.EventHandler(this.toolStripDropDownButton1_VisibleChanged);
             // 
             // pModelToolStripMenuItem
             // 
             this.pModelToolStripMenuItem.Name = "pModelToolStripMenuItem";
-            this.pModelToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.pModelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pModelToolStripMenuItem.Text = "PModel";
             this.pModelToolStripMenuItem.Visible = false;
             this.pModelToolStripMenuItem.Click += new System.EventHandler(this.pModelToolStripMenuItem_Click);
@@ -515,7 +515,7 @@ namespace CardsToPModels
             // pIMToolStripMenuItem
             // 
             this.pIMToolStripMenuItem.Name = "pIMToolStripMenuItem";
-            this.pIMToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.pIMToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pIMToolStripMenuItem.Text = "PIM";
             this.pIMToolStripMenuItem.Visible = false;
             this.pIMToolStripMenuItem.Click += new System.EventHandler(this.pIMToolStripMenuItem_Click);
@@ -523,7 +523,7 @@ namespace CardsToPModels
             // pMRToolStripMenuItem
             // 
             this.pMRToolStripMenuItem.Name = "pMRToolStripMenuItem";
-            this.pMRToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.pMRToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pMRToolStripMenuItem.Text = "PMR";
             this.pMRToolStripMenuItem.Visible = false;
             this.pMRToolStripMenuItem.Click += new System.EventHandler(this.pMRToolStripMenuItem_Click);
@@ -549,7 +549,7 @@ namespace CardsToPModels
             this.tabControl.Controls.Add(this.C2M);
             this.tabControl.Controls.Add(this.Models);
             this.tabControl.Location = new System.Drawing.Point(28, 23);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(1293, 700);
@@ -562,10 +562,10 @@ namespace CardsToPModels
             this.C2M.Location = new System.Drawing.Point(4, 22);
             this.C2M.Margin = new System.Windows.Forms.Padding(0);
             this.C2M.Name = "C2M";
-            this.C2M.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.C2M.Padding = new System.Windows.Forms.Padding(2);
             this.C2M.Size = new System.Drawing.Size(1285, 674);
             this.C2M.TabIndex = 0;
-            this.C2M.Text = "C2M";
+            this.C2M.Text = "Design";
             this.C2M.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel
@@ -586,9 +586,9 @@ namespace CardsToPModels
             this.Models.Controls.Add(this.panelPIM);
             this.Models.Controls.Add(this.panelPModel);
             this.Models.Location = new System.Drawing.Point(4, 22);
-            this.Models.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Models.Margin = new System.Windows.Forms.Padding(2);
             this.Models.Name = "Models";
-            this.Models.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Models.Padding = new System.Windows.Forms.Padding(2);
             this.Models.Size = new System.Drawing.Size(1285, 674);
             this.Models.TabIndex = 1;
             this.Models.Text = "Models";
